@@ -1,0 +1,743 @@
+@media (max-width:1400px) { 
+header{
+     padding: 200px 5%;
+    }
+header > img , header .card-img
+    {
+    display: none;
+    }  
+
+.popular .contaner1{
+ grid-template-columns:repeat(3,1fr);
+    }
+.popular .contaner1 .card1 div{
+    margin-top:20px;
+}
+
+.popular .contaner1 .burger ,
+.popular .contaner1 .pizza{
+    display: none;
+}
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8%;
+    padding:110px 8%;
+}
+.about .aside-sec{
+    display: none;
+}
+
+.about > img{
+    display: none;
+}
+
+.best-selling > img{
+ display:none;
+}
+
+.menu > img{
+    display: none;
+}
+
+.discount > img{
+    display: none;
+}
+.client > img:first-of-type{
+    display: none;
+}
+.footer > img{
+    display: none;
+}
+
+}
+
+/* start media screen */
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.mobile-overlay{
+    display: none;
+}
+
+@media (max-width:1200px) {
+nav > input:checked~ .mobile-overlay{
+    opacity: 1;
+    visibility: visible;
+}
+
+nav > input:checked~ .mobile-overlay .mobile-menu{
+    right:0;
+}
+.mobile-overlay{
+    display: block;
+    background:rgba(0, 0, 0, 0.694);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.circle{
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 10px 10px;
+
+}
+
+.mobile-menu{
+    position: absolute;
+    transition: 0.5s;
+    width: 400px;
+    height: 100%;
+    right: -400px;
+    bottom: 0;
+    background:var(--white-color);
+    color: var(--dark-color);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    border-left:2px solid var(--main-color);
+    overflow-y: scroll;
+}
+.mobile-menu .top-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mobile-menu .top-menu .close{
+    background: var(--main-color);
+    color: var(--white-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.mobile-menu .top-menu .close:hover{
+    transform: rotate(360deg) scale(0.8);
+    background: rgb(173, 14, 14);
+    box-shadow: 0 0 5px var(--main-color);
+
+}
+
+.mobile-menu .links-contaner .link-group a{
+    text-decoration: none;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0px;
+    border-bottom: 2px solid #666666c9;
+    font-family: var(--body-f-sbold);
+    font-size: 15px;
+}
+
+.mobile-menu .links-contaner .link-group .mobile-dropdown {
+    padding-left: 25px;
+    display: none;
+}
+.mobile-menu .links-contaner .link-group input:checked ~ .mobile-dropdown{
+    display: block;
+}
+.mobile-menu .links-contaner .link-group input{
+    display: none;
+}
+
+.mobile-menu .links-contaner .link-group input:checked + a .plus{
+    transform: rotate(45deg);
+}
+
+.mobile-menu .links-contaner .link-group a .plus{
+    font-size: 14px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.mobile-menu .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu .contact-info b{
+    font-size:20px;
+    font-family: var(--body-f-bold);
+}
+
+.mobile-menu .contact-info .contactcontaner{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu .contact-info .contactcontaner div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mobile-menu .contact-info .contactcontaner div i{
+    color: var(--main-color);
+}
+
+.mobile-menu .contact-info .contactcontaner div span{
+    opacity: 0.5;
+    font-size: 17px;
+}
+
+.contact-info .btn{
+    width: 100%;
+    justify-content: center;
+    padding: 20px 25px;
+}
+
+
+.mobile-menu .social{
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;   
+}
+
+.mobile-menu .social i{
+    border: 1.5px solid #888;
+    color: #888;
+    width: 45px;
+    height: 45px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .social i:hover{
+    background: var(--main-color);
+    color:var(--white-color);
+    border: var(--main-color);
+}
+
+/* nav */
+nav{
+    background: var(--white-color);
+} 
+nav .logo{
+    height: 110px;
+}   
+
+nav .navbar .top-nav , 
+nav .navbar .down-nav ul{
+    display:none;
+} 
+
+nav .navbar .top-nav , 
+nav .navbar .down-nav{
+    background: var(--white-color);
+} 
+
+nav .navbar .down-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    padding-right:3%;
+}
+/* header  & sections*/
+
+header .data h1{
+    font-size: 80px;
+}
+
+.sec-heading h2{
+    font-size: 40px;
+}
+
+.popular .contaner1{
+    grid-template-columns:repeat(3,1fr);
+    
+}
+
+.popular .contaner1{
+    width: 100%;
+}
+
+.popular .contaner2{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.best-selling .contaner6{
+    grid-template-columns: repeat(3 ,1fr);
+}
+
+.offer > img{
+    display: none;
+}
+
+.offer .contaner7 .img-offer{
+    width:500px;
+    display: flex;
+    order: -1;
+}
+
+.offer .contaner7 .img-offer img{
+    width:990px;
+    margin-top: 10px;
+}
+.offer .contaner7{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 10px 30px;
+    height: 100%;
+    width: 100%;
+    
+}
+.chef .contaner10{
+    grid-template-columns: repeat(2 , 1fr);
+    margin-top: -200px;
+}
+
+.chef .contaner10 .chefcard{
+    margin-top: 200px;
+}
+.tag{
+    display: flex;
+    gap: 80px;
+    width: 100%;
+    
+}
+.tag .contaner8 p{
+    font-size: 40px;
+    padding: 0 30px;
+}
+
+.photo{  
+    grid-template-columns: repeat(5,1fr);
+}
+
+.footer .contaner14{
+    
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.footer .contaner14 .colm2{
+    margin-left: 0;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.footer .contaner14 .colm1{
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+}
+
+/* -------------------- */
+
+
+@media (max-width:992px) {
+    header .data h1{
+        font-size: 75px;
+    }
+    
+    .sec-heading h2{
+        font-size: 35px;
+    }
+    
+    .popular .contaner1{
+        grid-template-columns:repeat(2,1fr);
+        
+    }
+    
+    .popular .contaner2{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .best-selling .contaner6{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .offer .contaner7 .img-offer img{
+        width:740px;
+        margin-top: 10px;
+}
+.offer .contaner7{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 80px;
+    height: 100%;
+    width: 100%;
+    
+}
+.menu .food-contaner .contaner4{
+    grid-template-columns:1fr;
+    
+    
+}
+
+.discount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    margin:0 80px;
+    padding: 10px 20px;
+}
+
+.discount .details{
+    background: rgba(255, 255, 255, 0.199);
+}
+
+.discount .details .sec-heading h2{
+    font-size: 19px;
+}
+
+.chef .contaner10{
+    grid-template-columns: repeat(1 , 1fr);
+    margin-top: -200px;
+}
+
+.chef .contaner10 .chefcard{
+    margin-top: 200px;
+
+}
+
+.news .contaner12 .cardnews{
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    padding: 0;
+}
+.news .contaner12 .cardnews div{
+    gap: 15px;
+    padding: 15px;
+}
+
+.news .contaner12 .cardnews div .five{
+    font-size: 18px;
+}
+.photo{
+    
+    grid-template-columns: repeat(1fr 1fr 1fr);
+    align-items: center;
+}
+.footer .contaner13{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.footer .contaner13 .info div p{
+    font-size: 17px;
+}
+.footer .contaner14{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer .contaner14 .colm1{
+    margin-top: 30px;
+}
+.footer .contaner14 .logof{
+    margin-top: 20px;
+}
+}
+
+/* .......................... */
+
+
+@media (max-width:786px) {
+  header .data h1{
+    font-size:70px;
+}  
+
+.sec-heading h2{
+    font-size: 30px;
+}
+
+.popular .contaner1{
+grid-template-columns:repeat(1,1fr);
+
+}
+
+.popular .contaner2{
+grid-template-columns: repeat(2,1fr);
+}
+
+.best-selling .contaner6{
+    grid-template-columns: repeat(1,1fr);
+}
+
+.offer .contaner7 .img-offer img{
+    width:520px;
+    margin-top: 10px;
+}
+.offer .contaner7{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 100px;
+    height:100%;
+    width: 100%;
+    
+}
+
+.menu .food-contaner .contaner4{
+    grid-template-columns:1fr;
+    
+    
+}
+
+.discount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    margin:0 80px;
+    padding: 10px 20px;
+}
+
+.discount .details{
+    background: rgba(255, 255, 255, 0.21);
+}
+.discount .cardimg2{
+    width:100%;
+}
+
+.discount .cardimg2 img{
+    width: 100%;
+}
+.discount .details .sec-heading h2{
+    font-size: 17px;
+}
+.chef .contaner10{
+    grid-template-columns: repeat(1 , 1fr);
+    margin-top: -200px;
+}
+
+.chef .contaner10 .chefcard{
+    margin-top: 200px;
+}
+
+.client .contaner11 .opinion{
+    margin-top: -50px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 90%;
+    gap: 10px;
+    top: 3%;
+    right: 8%;
+    overflow: hidden;  
+
+}
+.tag{
+    margin-top: 20px;
+}
+.news .contaner12 .cardnews{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.photo{
+    
+    grid-template-columns:(1fr 1fr 1fr);
+}
+
+.footer .contaner13{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.footer .contaner13{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.footer .contaner13 .info div p{
+    font-size: 17px;
+}
+
+.end1 .contanerend{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+
+}
+
+
+/* -------------- */
+
+@media (max-width:546px) {
+    header .data h1{
+    font-size: 50px;   
+}
+
+.sec-heading h2{
+    font-size: 25px;
+}
+.popular .contaner1{
+grid-template-columns:repeat(1,1fr);
+
+}
+.popular .contaner2{
+grid-template-columns: repeat(1,1fr);
+}
+
+.best-selling .contaner6{
+grid-template-columns: repeat(1,1fr);
+}
+
+.offer .contaner7 .img-offer img{
+    width:320px;
+    margin-top: 10px;
+}
+.offer .contaner7{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 10px 0px;
+    height:100%;
+    width: 100%;
+    
+}
+
+.menu .food-contaner .contaner4{
+    grid-template-columns:1fr;   
+}
+.menu .food-contaner{
+    padding: 30px 20px;
+    width: 95%;
+    
+    
+}
+
+.discount{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    margin:0 20px;
+    padding: 20px 15px;
+    overflow: hidden;
+}
+
+.discount .details{
+    background: rgba(255, 255, 255, 0.059);
+}
+
+.discount .cardimg2{
+    width:100%;
+}
+
+.discount .cardimg2 img{
+    width: 100%;
+}
+.discount .details .sec-heading h2{
+    font-size: 16px;
+}
+.chef .contaner10{
+    grid-template-columns: repeat(1 , 1fr);
+    margin-top: -200px;
+}
+
+.chef .contaner10 .chefcard{
+    margin-top: 200px;
+}
+
+.client .contaner11 .opinion{
+    position: relative;
+    touch-action: auto;
+    right: auto;
+    width: 100%;
+    padding: 10px;
+    margin-top: 0;
+
+}
+
+.client .contaner11 .opinion .carddetails{
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 15px;
+    box-sizing: border-box;
+}
+
+.client .contaner11 .opinion .carddetails p{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.client .contaner11{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.client .contaner11 .cookchef{
+    width: 100%;
+}
+
+.news .contaner12 .cardnews{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    
+}
+
+.photo{
+    
+    grid-template-columns:(1fr);
+}
+
+.footer .contaner14{
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px 0;
+}
+
+.footer .contaner14 .colm2 h5{
+    width:270px;
+}
+
+.end1 .contanerend{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+}
+
+
+
+@media (max-width:350px) {
+    
+}
+
+
